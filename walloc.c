@@ -13,6 +13,10 @@
 typedef struct s_heap {
 	struct s_heap *prev;
 	struct s_heap *next;
+<<<<<<< HEAD
+=======
+	//t_heap_group group; //Tiny, Small, or Large
+>>>>>>> 86bfd075714b41b296330764f3efe0db9f941954
 	size_t total_size;
 	size_t free_size;
 	size_t block_count;
@@ -83,7 +87,8 @@ t_block *find_free_block(size_t size)
 void *walloc(size_t size){
 	t_block *block;
 
-	if(size == 0 || size > SIZE_MAX/2){
+	if(size == 0 || size > SIZE_MAX/2)
+	{
 		return NULL;
 	}
 	size = (size + 15) & ~(size_t)15; //rounds up to a multiple of 16
