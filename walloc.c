@@ -13,10 +13,6 @@
 typedef struct s_heap {
 	struct s_heap *prev;
 	struct s_heap *next;
-<<<<<<< HEAD
-=======
-	//t_heap_group group; //Tiny, Small, or Large
->>>>>>> 86bfd075714b41b296330764f3efe0db9f941954
 	size_t total_size;
 	size_t free_size;
 	size_t block_count;
